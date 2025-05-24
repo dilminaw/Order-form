@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contraller.orders.ordersFormContraller">
+   <children>
+      <Label layoutX="228.0" layoutY="14.0" text="ORDERS">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="115.0" text="CUSTOMER ID" />
+      <TextField fx:id="txtCusID" layoutX="105.0" layoutY="111.0" />
+      <TextField fx:id="txtItem" layoutX="105.0" layoutY="157.0" />
+      <Label layoutX="22.0" layoutY="161.0" text="ITEM CODE" />
+      <Label layoutX="26.0" layoutY="212.0" text="QUENTITY" />
+      <TextField fx:id="txtQuentity" layoutX="105.0" layoutY="208.0" />
+      <Label layoutX="26.0" layoutY="64.0" text="ORDER ID" />
+      <TextField fx:id="txtID" layoutX="105.0" layoutY="60.0" />
+      <Label layoutX="26.0" layoutY="263.0" text="ORDER DATE" />
+      <TextField fx:id="txtOrder" layoutX="105.0" layoutY="259.0" />
+      <Label layoutX="26.0" layoutY="304.0" text="TOTAL PRICE" />
+      <TextField fx:id="txtPrice" layoutX="105.0" layoutY="300.0" />
+      <Button layoutX="300.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" text="UPDATE" />
+      <Button layoutX="214.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnAddOrdersOnAction" prefHeight="26.0" prefWidth="54.0" text="ADD" />
+      <Button layoutX="393.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="DELETE" />
+      <Button layoutX="491.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="SEARCH" />
+   </children>
+</AnchorPane>
