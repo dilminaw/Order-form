@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contraller.orders.ordersFormContraller">
    <children>
       <Label layoutX="228.0" layoutY="14.0" text="ORDERS">
@@ -23,7 +22,7 @@
       <Label layoutX="26.0" layoutY="64.0" text="ORDER ID" />
       <TextField fx:id="txtID" layoutX="105.0" layoutY="60.0" />
       <Label layoutX="26.0" layoutY="263.0" text="ORDER DATE" />
-      <TextField fx:id="txtOrder" layoutX="105.0" layoutY="259.0" />
+      <TextField fx:id="txtOrderDate" layoutX="105.0" layoutY="259.0" />
       <Label layoutX="26.0" layoutY="304.0" text="TOTAL PRICE" />
       <TextField fx:id="txtPrice" layoutX="105.0" layoutY="300.0" />
       <Button layoutX="300.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" text="UPDATE" />

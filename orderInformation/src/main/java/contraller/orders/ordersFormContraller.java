@@ -1,12 +1,23 @@
 package contraller.orders;
 
+import DB.dbConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import order.Order;
 
-public class ordersFormContraller {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 
+public class ordersFormContraller {
+@FXML
+    public TextField txtOrderDate;
     @FXML
     private TextField txtCusID;
 
@@ -16,8 +27,7 @@ public class ordersFormContraller {
     @FXML
     private TextField txtItem;
 
-    @FXML
-    private TextField txtOrder;
+
 
     @FXML
     private TextField txtPrice;
@@ -30,7 +40,17 @@ public class ordersFormContraller {
     @FXML
     void btnAddOrdersOnAction(ActionEvent event) {
 
-        Order order = new Order(txtID.getText(),txtCusID.getText(),txtItem.getText(),txtQuentity.getText(),txtOrder.getText());
+        Order order = new Order(Integer.parseInt(txtID.getText()) ,
+                txtCusID.getText(),txtItem.getText(),
+                Integer.parseInt(txtQuentity.getText()),
+                LocalDate.parse(txtOrderDate.getText()),
+                Double.parseDouble(txtQuentity.getText()));
+
+
+        if (orderService.addOrder(order)){
+
+            new Alert(Alert.AlertType.CONFIRMATION,"ADDED COMPLETE");
+        }
 
 
     }
@@ -49,5 +69,8 @@ public class ordersFormContraller {
     void btnUpdateOnAction(ActionEvent event) {
 
     }
+
+
+
 
 }

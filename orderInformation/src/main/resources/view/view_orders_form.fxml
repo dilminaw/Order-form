@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contraller.viewOrderContraller">
+   <children>
+      <TableView fx:id="TableOrders" layoutX="30.0" layoutY="173.0" prefHeight="200.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="txtOrderId" prefWidth="96.79999542236328" text="orderID" />
+          <TableColumn fx:id="txtCusName" prefWidth="74.4000244140625" text="cusName" />
+            <TableColumn fx:id="txtItemCode" prefWidth="92.800048828125" text="itemCode" />
+            <TableColumn fx:id="txtQuentity" prefWidth="85.60003662109375" text="quentity" />
+            <TableColumn fx:id="txtDate" prefWidth="85.5999755859375" text="Date" />
+            <TableColumn fx:id="txtprice" prefWidth="108.80001831054688" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="252.0" layoutY="373.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="reload" />
+      <Label layoutX="14.0" layoutY="64.0" text="CUSTOMER ID" />
+      <TextField fx:id="txtCusIDView" layoutX="93.0" layoutY="60.0" />
+      <TextField fx:id="txtItemview" layoutX="93.0" layoutY="106.0" />
+      <Label layoutX="10.0" layoutY="110.0" text="ITEM CODE" />
+      <Label layoutX="329.0" layoutY="18.0" text="QUENTITY" />
+      <TextField fx:id="txtQuentity1view" layoutX="424.0" layoutY="14.0" />
+      <Label layoutX="14.0" layoutY="18.0" text="ORDER ID" />
+      <TextField fx:id="txtIDView" layoutX="93.0" layoutY="14.0" />
+      <Label layoutX="329.0" layoutY="64.0" text="ORDER DATE" />
+      <TextField fx:id="txtOrderDateview" layoutX="424.0" layoutY="51.0" />
+      <Label layoutX="329.0" layoutY="110.0" text="TOTAL PRICE" />
+      <TextField fx:id="txtPriceview" layoutX="424.0" layoutY="106.0" />
+   </children>
+</AnchorPane>
